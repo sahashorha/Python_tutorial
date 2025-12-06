@@ -1,6 +1,6 @@
-# Dictonary
+# List
 todo_list = [];
-
+# Add task function which 
 def add_task():
       task = input("Enter a task: ")
       todo_list.append({"Task" :task , "Status" : "pending"});
@@ -47,12 +47,12 @@ def menu():
       while(True):
             print("*** Menu Item ****")
             print("1. Add a New Task")
-            print("3. View All Tasks")
-            print("4. Remove a Tasks")
-            print("5. Mark a Task Completed")
+            print("2. View All Tasks")
+            print("3. Remove a Tasks")
+            print("4. Mark a Task Completed")
             print("5. Exit")
 
-            choice = input("Enter Your Choice");
+            choice = input("Enter Your Choice: ");
             if (choice == '1'):
                   add_task();
             elif(choice == '2'):
@@ -63,3 +63,4 @@ def menu():
                   mark_done();
             else:
                   print("Invalid Choice ! Please Try Again")
+menu();
