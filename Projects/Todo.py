@@ -1,10 +1,11 @@
 # List
 todo_list = [];
-# Add task function which 
+# Add task function  
 def add_task():
       task = input("Enter a task: ")
       todo_list.append({"Task" :task , "Status" : "pending"});
       print("New Task Added Successfully.....\n")
+# View task fucntion
 def view_task():
       print("Your Todo List....")
       if len(todo_list) == 0:
@@ -12,7 +13,7 @@ def view_task():
       else:
             for index,task in enumerate(todo_list,1):
                   print(f"{index}: {task['Task']} - {task['Status']}")
-
+# remove task function
 def remove_task():
       if(len(todo_list) == 0):                                   
             print("List is Empty")
@@ -26,7 +27,7 @@ def remove_task():
                         print("Invalid Task Number")
             except:
                   print("Please Enter a valid Task Number: ")
-#fucntion to create  mark done
+#  mark done function
 def mark_done():
       try:
             if len(todo_list) == 0:
@@ -40,9 +41,7 @@ def mark_done():
                         print("Invalid Task Number: ")
       except ValueError:
             print("Please Enter a Valid Task Number")
-
-            
-
+# menu function
 def menu():
       while(True):
             print("*** Menu Item ****")
@@ -64,3 +63,4 @@ def menu():
             else:
                   print("Invalid Choice ! Please Try Again")
 menu();
+
